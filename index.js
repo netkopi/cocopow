@@ -120,6 +120,12 @@ teamMates.forEach((mate, i) => {
 }) */
 
 
+
+window.addEventListener('DOMContentLoaded', () => {
+    const loader = document.querySelector('.loader')
+    loader.style.display = 'none'
+})
+
 const aboutLink = document.querySelectorAll('.about-link')
 const productsLink = document.querySelectorAll('.products-link')
 const howToOrderLink = document.querySelectorAll('.how-to-order-link')
