@@ -81,6 +81,13 @@ body {
     }
 }
 
+.orange {
+    color: #ED892D;
+}
+.green {
+    color: limegreen;
+}
+
 [popover] {
     width: 100%;
     height: 100%;
@@ -243,6 +250,7 @@ header img {
     justify-content: center;
     text-transform: capitalize;
     border: none;
+    cursor: pointer;
 }
 
 .menu-button {
@@ -355,7 +363,8 @@ main {
 }
 .hero .cta-link {
     font-size: 24px;
-    width: 300px;
+    width: max(260px, 100%);
+    max-width: 300px;
     height: 80px;
     margin-top: 100px;
     background-color: transparent;
@@ -391,6 +400,8 @@ main {
 
 .about {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: clamp(100px, 25vw, 256px);
     padding-bottom: clamp(100px, 25vw, 256px);
     display: flex;
@@ -404,9 +415,9 @@ main {
     padding: 0 20px;
 }
 .about .img-container {
-    width: max(300px, 90%);
+    width: max(260px, 100%);
     max-width: 600px;
-    height: clamp(300px, 80vw, 600px);
+    height: clamp(260px, 80vw, 600px);
     overflow: hidden;
     position: relative;
 }
@@ -418,7 +429,7 @@ main {
     object-position: center;
 }
 .about .about-content {
-    width: max(300px, 90%);
+    width: max(260px, 100%);
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -489,11 +500,11 @@ main {
     overflow: hidden;
 }
 .team .card {
-    width: max(300px, 100%);
+    width: max(260px, 100%);
     max-width: 600px;
-    height: clamp(300px, 80vw, 600px);
+    height: clamp(260px, 80vw, 600px);
     overflow: hidden;
-    cursor: pointer;
+    /* cursor: pointer; */
     position: relative;
 }
 .team .card:hover .info {
@@ -575,9 +586,9 @@ main {
     gap: 50px;
 }
 .products .img-container {
-    width: max(300px, 100%);
+    width: max(260px, 100%);
     max-width: 600px;
-    height: clamp(300px, 80vw, 600px);
+    height: clamp(260px, 80vw, 600px);
     overflow: hidden;
     position: relative;
 }
@@ -591,7 +602,7 @@ main {
     top: -120px;
 }
 .products .content {
-    width: max(300px, 90%);
+    width: max(260px, 100%);
     max-width: 600px;
     color: #fff;
     display: flex;
@@ -616,9 +627,10 @@ main {
     gap: 20px;
 }
 .products span {
+    font-size: 24px;
     width: 30px;
     height: 30px;
-    background-color: lime;
+    /* background-color: lime; */
     display: flex;
 }
 .products i {
@@ -645,7 +657,7 @@ main {
     gap: 50px;
 }
 .how-to-order .content {
-    width: max(300px, 90%);
+    width: max(260px, 100%);
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -660,9 +672,9 @@ main {
     line-height: 29px;
 }
 .how-to-order .img-container {
-    width: max(300px, 100%);
+    width: max(260px, 100%);
     max-width: 600px;
-    height: clamp(300px, 80vw, 500px);
+    height: clamp(260px, 80vw, 500px);
     position: relative;
 }
 .how-to-order img {
@@ -763,21 +775,22 @@ main {
 
 .feedback {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: clamp(100px, 25vw, 256px);
     padding-bottom: clamp(100px, 25vw, 256px);
     display: flex;
 }
 .feedback .container {
-    width: max(300px, 90%);
+    width: max(260px, 100%);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
 }
 .feedback .form {
-    width: 600px;
+    width: max(260px, 100%);
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -803,7 +816,8 @@ main {
     cursor: pointer;
 }
 .feedback .content {
-    width: 600px;
+    width: max(260px, 100%);
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -831,7 +845,7 @@ footer .container {
     align-items: center;
 }
 footer section {
-    width: max(300px, 90%);
+    width: max(260px, 90%);
     padding: 100px 0;
     display: flex;
     justify-content: center;
@@ -840,8 +854,9 @@ footer section {
     flex-wrap: wrap;
 }
 footer .img-container {
-    width: 300px;
-    height: 300px;
+    width: max(260px, 100%);
+    max-width: 300px;
+    height: clamp(260px, 80vw, 300px);
     position: relative;
 }
 footer img {
@@ -854,18 +869,19 @@ footer .content {
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 20px;
 }
 footer h1 {
-    font-size: 44px;
+    font-size: clamp(36px, 8vw, 44px);
     text-align: center;
 }
 footer section:first-child a {
     text-decoration: none;
     color: #fff;
     background-color: transparent;
-    width: 300px;
+    width: max(260px, 100%);
+    max-width: 300px;
     height: 50px;
     border: 1px solid #fff;
     border-radius: 50px;
@@ -890,7 +906,11 @@ footer section:last-child button {
 
 
 
-
+@media (max-width: 1276px){
+    footer .content {
+        align-items: center;
+    }
+}
 @media (max-width: 968px){
     .about .container, .team .persons, .products section  {
         flex-wrap: wrap;
