@@ -122,15 +122,64 @@ body {
     color: #fff;
 }
 
-/* #contact-us-form {
-    display: flex;
-} */
 .contact-us-form {
     background-color: #fff;
     width: max(300px, 100%);
     max-width: 800px;
     height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.contact-us-form form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.contact-us-form :where(input, textarea){
+    font-weight: 100;
+    width: max(300px, 100%);
+    max-width: 600px;
+    font-size: 14px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+}
+.contact-us-form textarea {
+    height: 200px;
+}
+.contact-us-form .note {
+    width: max(300px, 100%);
+    max-width: 600px;
+    border: 2px solid #ED892D;
+    border-radius: 10px;
+    background-color: #ed8a2d32;
+    color: #111;
+    font-size: 14px;
+    padding: 10px;
+}
+.contact-us-form .buttons {
+    width: max(300px, 100%);
+    max-width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row-reverse;
+    gap: 20px;
+}
+.contact-us-form button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #ddd;
+}
+.contact-us-form button[type="submit"] {
+    background-color: #ED892D !important;
+    color: #fff;
+}
+
 
 
 header {

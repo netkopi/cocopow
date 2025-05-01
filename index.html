@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COCOPOW</title>
-    <link rel="icon" href="images/COCOPOW.png">
+    <link rel="icon" href="images/COCOPOW.webp">
     <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
@@ -16,13 +16,25 @@
 </head>
 <body>
     <div class="loader">
-        <img src="images/coconut.jpg" alt="">
+        <img src="images/coconut.webp" alt="">
         <div class="dots">...</div>
     </div>
 
     <div popover id="contact-us-form">
         <div class="contact-us-form">
-            
+            <form action="">
+                <h1>Contact Us</h1>
+                <div class="note">
+                    Please fill up the following input fields - your name, phone number, and your purpose of contacting us.
+                </div>
+                <input type="text" placeholder="name">
+                <input type="tel" placeholder="contact number">
+                <textarea name="" id=""></textarea>
+                <div class="buttons">
+                    <button type="submit">submit</button>
+                    <button type="button" popovertarget="contact-us-form" popovertargetaction="hide">cancel</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -48,7 +60,7 @@
         <div class="container">
             <div class="logo">
                 <div class="img-container">
-                    <img src="images/COCOPOW.png" alt="">
+                    <img src="images/COCOPOW.webp" alt="">
                 </div>
             </div>
             <div class="nav-links">
@@ -56,7 +68,7 @@
                 <button class="products-link">our products</button>
                 <button class="how-to-order-link">how to order</button>
             </div>
-            <button class="cta-link">contact us</button>
+            <button class="cta-link" popovertarget="contact-us-form">contact us</button>
             <label for="menu-button" class="menu-button">
                 <span></span>
                 <span></span>
@@ -73,7 +85,7 @@
                     <label for="menu-button" role="button" class="about-link">about us</label>
                     <label for="menu-button" role="button" class="products-link">our products</label>
                     <label for="menu-button" role="button" class="how-to-order-link">how to order</label>
-                    <button class="cta-link">contact us</button>
+                    <button class="cta-link" popovertarget="contact-us-form">contact us</button>
                 </div>
             </div>
         </div>
@@ -82,7 +94,7 @@
     <main>
         <div class="hero">
             <div class="bg-img">
-                <img src="images/road.jpg" alt="">
+                <img src="images/road.webp" alt="">
             </div>
             <div class="content">
                 <h1>Hanap Mo, <span>Hatid Ko</span></h1>
@@ -93,7 +105,7 @@
         <div class="about">
             <div class="container">
                 <div class="img-container">
-                    <img src="images/team.jpg" alt="">
+                    <img src="images/team.webp" alt="">
                 </div>
                 <div class="about-content">
                     <h1>Did your know?</h1>
@@ -141,7 +153,7 @@
                 <div class="persons">
                     <div class="card">
                         <div class="img-container">
-                            <img src="images/person-woman.jpg" alt="">
+                            <img src="images/person-woman.webp" alt="">
                         </div>
                         <div class="info">
                             <div>
@@ -152,7 +164,7 @@
                     </div>
                     <div class="card">
                         <div class="img-container">
-                            <img src="images/person-man.jpg" alt="">
+                            <img src="images/person-man.webp" alt="">
                         </div>
                         <div class="info">
                             <div>
@@ -163,7 +175,7 @@
                     </div>
                     <div class="card">
                         <div class="img-container">
-                            <img src="images/person-woman-orange.jpg" alt="">
+                            <img src="images/person-woman-orange.webp" alt="">
                         </div>
                         <div class="info">
                             <div>
@@ -190,12 +202,12 @@
                         </div>
                     </div>
                     <div class="img-container">
-                        <img src="images/young-coconut.jpg" alt="">
+                        <img src="images/young-coconut.webp" alt="">
                     </div>
                 </section>
                 <section class="fade-up">
                     <div class="img-container">
-                        <img src="images/matured-coconut.jpg" alt="">
+                        <img src="images/matured-coconut.webp" alt="">
                     </div>
                     <div class="content">
                         <h1>Matured Coconut <i>"Niyog"</i></h1>
@@ -215,7 +227,7 @@
                     <p>Watch the short video tutorial provided by Coco Pow.</p>
                 </div>
                 <div class="img-container">
-                    <img src="images/thumbnail.png" alt="">
+                    <img src="images/thumbnail.webp" alt="">
                     <div class="play-action">
                         <button class="magnetic-button" data-strength="40" data-text-strength="40" popovertarget="video-stream">
                             <svg class="magnetic-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-200v-560l440 280-440 280Z"/></svg>
@@ -252,10 +264,10 @@
         <div class="container">
             <section>
                 <div class="img-container">
-                    <img src="images/COCOPOW.png" alt="">
+                    <img src="images/COCOPOW.webp" alt="">
                 </div>
                 <div class="img-container">
-                    <img src="images/map.jpg" alt="">
+                    <img src="images/map.webp" alt="">
                 </div>
                 <div class="content">
                     <h1>Coco Pow Incorporation</h1>
