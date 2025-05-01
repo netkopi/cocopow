@@ -122,8 +122,11 @@ teamMates.forEach((mate, i) => {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    const loader = document.querySelector('.loader')
-    loader.style.display = 'none'
+    setTimeout(() => {
+        const loader = document.querySelector('.loader')
+        loader.style.display = 'none'
+        document.body.style.overflowY = 'auto'
+    }, 3000)
 })
 
 const aboutLink = document.querySelectorAll('.about-link')

@@ -84,7 +84,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 3;
+    z-index: 5;
     background-color: rgb(0 0 0 / 50%);
     border: none;
 }
@@ -120,6 +120,16 @@ body {
     width: 30px;
     height: 30px;
     color: #fff;
+}
+
+/* #contact-us-form {
+    display: flex;
+} */
+.contact-us-form {
+    background-color: #fff;
+    width: max(300px, 100%);
+    max-width: 800px;
+    height: 600px;
 }
 
 
@@ -850,6 +860,9 @@ footer section:last-child button {
     }
     [popover] .video-container {
         height: 100vh;
+    }
+    .contact-us-form {
+        height: 100%;
     }
 }
 @media (min-width: 600px){
