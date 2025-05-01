@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger)
+/* gsap.registerPlugin(ScrollTrigger)
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
@@ -32,7 +32,7 @@ gsap.to(aboutImg, {
         end: "bottom top",
         scrub: true
     }
-})
+}) */
 
 
 
@@ -53,7 +53,7 @@ sections.forEach((section, i) => {
     
 }) */
 
-const magneticButtons = document.querySelectorAll('.magnetic-button')
+/* const magneticButtons = document.querySelectorAll('.magnetic-button')
 const magneticTexts = document.querySelectorAll('.magnetic-text')
 
 magneticButtons.forEach((button, i) => {
@@ -116,6 +116,39 @@ teamMates.forEach((mate, i) => {
         gsap.to(teamInfos[i], {
             opacity: 0
         })
+    })
+}) */
+
+
+const aboutLink = document.querySelectorAll('.about-link')
+const productsLink = document.querySelectorAll('.products-link')
+const howToOrderLink = document.querySelectorAll('.how-to-order-link')
+const logo = document.querySelector('.logo')
+
+const heroSection = document.querySelector('.hero')
+const aboutSection = document.querySelector('.about')
+const productsSection = document.querySelector('.products')
+const howToOrderSection = document.querySelector('.how-to-order')
+
+logo.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+})
+aboutLink.forEach(link => {
+    link.addEventListener('click', () => {
+        aboutSection.scrollIntoView({behavior:'smooth'})
+    })
+})
+productsLink.forEach(link => {
+    link.addEventListener('click', () => {
+        productsSection.scrollIntoView({behavior:'smooth'})
+    })
+})
+howToOrderLink.forEach(link => {
+    link.addEventListener('click', () => {
+        howToOrderSection.scrollIntoView({behavior:'smooth'})
     })
 })
 
