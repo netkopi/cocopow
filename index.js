@@ -25,33 +25,33 @@ const aboutImg = document.querySelector('.about img')
 const about  = document.querySelector('.about')
 gsap.to(aboutImg, {
     y: 64,
-    duration: 1,
-    ease: Power4.easeOut,
+    duration: 3,
     scrollTrigger: {
         trigger: about,
-        start: "-700px top",
+        start: "-256px top",
+        end: "bottom top",
         scrub: true
     }
 })
 
 
 
-       
+/*        
 const sections = document.querySelectorAll('.fade-up')
 
 sections.forEach((section, i) => {
     gsap.from(section, {
-        y: 32,
+        y: 64,
         opacity: 0,
         duration: .5,
         scrollTrigger: {
             trigger: section,
-            start: "-512px top",
+            start: "-300px top",
             toggleActions: "play reverse play reverse"
         }
     })
     
-})
+}) */
 
 const magneticButtons = document.querySelectorAll('.magnetic-button')
 const magneticTexts = document.querySelectorAll('.magnetic-text')
