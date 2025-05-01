@@ -1,4 +1,3 @@
-
 gsap.registerPlugin(ScrollTrigger)
 
 const scroll = new LocomotiveScroll({

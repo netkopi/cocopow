@@ -23,6 +23,7 @@ body {
     top: 0;
     z-index: 3;
     background-color: rgb(0 0 0 / 50%);
+    border: none;
 }
 [popover] > div {
     position: absolute;
@@ -31,7 +32,8 @@ body {
     transform: translate(-50%, -50%);
 }
 [popover] .video-container {
-    width: 800px;
+    width: max(375px, 100%);
+    max-width: 800px;
     height: 600px;
 }
 [popover] video {
@@ -110,6 +112,16 @@ header img {
     text-transform: capitalize;
 }
 
+@media (max-width: 800px){
+    [popover] > div {
+        left: 0%;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+    [popover] .video-container {
+        height: 100vh;
+    }
+}
 @media (max-width: 600px){
     .nav-links {
         display: none;
@@ -199,7 +211,8 @@ main {
 
 .about {
     width: 100%;
-    padding: 256px 0;
+    padding-top: clamp(100px, 25vw, 256px);
+    padding-bottom: clamp(100px, 25vw, 256px);
     display: flex;
     flex-direction: column;
 }
@@ -207,13 +220,13 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     padding: 0 20px;
 }
 .about .img-container {
     width: max(300px, 90%);
     max-width: 600px;
-    height: clamp(300px, 100vw, 600px);
+    height: clamp(300px, 80vw, 600px);
     overflow: hidden;
     position: relative;
 }
@@ -273,7 +286,10 @@ main {
 
 .team {
     width: 100%;
-    padding: 256px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: clamp(100px, 25vw, 256px);
+    padding-bottom: clamp(100px, 25vw, 256px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -295,10 +311,16 @@ main {
 .team .card {
     width: max(300px, 100%);
     max-width: 600px;
-    height: 600px;
+    height: clamp(300px, 80vw, 600px);
     overflow: hidden;
     cursor: pointer;
     position: relative;
+}
+.team .card:hover .info {
+    opacity: 1;
+}
+.team .card:hover .img-container {
+    scale: 1.1;
 }
 .team .info {
     width: 100%;
@@ -314,6 +336,7 @@ main {
     flex-direction: column;
     justify-content: flex-end;
     opacity: 0;
+    transition: opacity .3s ease;
 }
 .team .info > div {
     display: flex;
@@ -322,7 +345,9 @@ main {
 }
 .team .img-container {
     width: 100%;
-    height: 100%
+    height: 100%;
+    transition: scale .3s ease;
+
 }
 .team img {
     width: 100%;
@@ -347,7 +372,10 @@ main {
 
 .products {
     width: 100%;
-    padding: 256px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: clamp(100px, 25vw, 256px);
+    padding-bottom: clamp(100px, 25vw, 256px);
     position: relative;
     background-color: #111;
 }
@@ -357,7 +385,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 256px;
+    gap: clamp(100px, 25vw, 256px);
 }
 .products section {
     width: 100%;
@@ -366,11 +394,10 @@ main {
     position: relative;
     gap: 50px;
 }
-
 .products .img-container {
     width: max(300px, 100%);
     max-width: 600px;
-    height: clamp(300px, 100vw, 600px);
+    height: clamp(300px, 80vw, 600px);
     overflow: hidden;
     position: relative;
 }
@@ -399,7 +426,7 @@ main {
     line-height: 29px;
 }
 .products .schedule {
-    margin-top: 100px;
+    margin-top: clamp(50px, 10vw, 100px);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -422,7 +449,10 @@ main {
 
 .how-to-order {
     background-color: #fff;
-    padding: 256px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: clamp(100px, 25vw, 256px);
+    padding-bottom: clamp(100px, 25vw, 256px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -452,8 +482,7 @@ main {
 .how-to-order .img-container {
     width: max(300px, 100%);
     max-width: 600px;
-    height: clamp(300px, 100vw, 600px);
-    height: 500px;
+    height: clamp(300px, 80vw, 500px);
     position: relative;
 }
 .how-to-order img {
@@ -554,7 +583,10 @@ main {
 
 .feedback {
     width: 100%;
-    padding: 256px 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: clamp(100px, 25vw, 256px);
+    padding-bottom: clamp(100px, 25vw, 256px);
     display: flex;
 }
 .feedback .container {
