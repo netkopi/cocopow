@@ -26,10 +26,11 @@
                     Please fill up the following input fields - your name, phone number, and your purpose of contacting us. One of our staff will call you lately, after submiting the form.
                 </div>
                 <input type="text" placeholder="Full name">
-                <input type="email" name="email" placeholder="Email address">
-                <input type="tel" name="contact_number" placeholder="Contact number">
-                <textarea name="message" id="" placeholder="Purpose of contact..."></textarea>
+                <input type="email" name="Email address" placeholder="Email address">
+                <input type="tel" name="Contact Number" placeholder="Contact number">
+                <textarea name="Message" id="" placeholder="Purpose of contact..."></textarea>
                 <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We will call to you shortly.">
+                <input type="hidden" name="_template" value="table">
                 <div class="buttons">
                     <button type="submit">submit</button>
                     <button type="button" popovertarget="contact-us-form" popovertargetaction="hide">cancel</button>
@@ -321,6 +322,7 @@
                         <input type="email" name="email" id="" placeholder="e.g. xxxxx@gmail.com" required>
                         <input name="_formsubmit_id" type="text" style="display:none">
                         <input type="hidden" name="_autoresponse" value="Thank you for your feedback!😁 We will do our best to make our service better in the future.">
+                        <input type="hidden" name="_template" value="table">
                         <button type="submit">submit feedback</button>
                     </form>
                 </div>
