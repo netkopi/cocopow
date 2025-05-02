@@ -6,11 +6,9 @@
     <title>COCOPOW</title>
     <link rel="icon" href="images/COCOPOW.webp">
     <link rel="stylesheet" href="index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
 
     <script src="index.js" defer></script>
 </head>
@@ -38,6 +36,13 @@
         </div>
     </div>
 
+    <div popover id="order-form">
+        <div class="order-form">
+            <form action="">
+                
+            </form>
+        </div>
+    </div>
 
 
     <div popover id="video-stream">
@@ -102,7 +107,7 @@
                 <button class="cta-link">Order Now</button>
             </div>
         </div>
-        <div class="about">
+        <div class="about fade-up">
             <div class="container">
                 <div class="img-container">
                     <img src="images/team.webp" alt="">
@@ -147,7 +152,34 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="features">
+            <div class="container">
+                <div class="cards fade-up">
+                    <div class="card">
+                        <h1>FAST SHIPPING</h1>
+                        <p>We offer you our fast shipping service. We carefully ship your orders from Coco Pow Hub, to your hands.</p>
+                        <div class="img-container">
+                            <img src="images/coconut-truck3.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h1>100% FRESH</h1>
+                        <p>Our coconuts are top quality coconuts. We don't take from stocks. Our coconuts are 100% pure and fresh, harvested right after order.</p>
+                        <div class="img-container">
+                            <img src="images/coconut2.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h1>10K+ SUPPLIES</h1>
+                        <p>Running out of supply? Worry no more! Coco Pow can supply more than 10,000 coconuts every month.</p>
+                        <div class="img-container">
+                            <img src="images/coconut-truck2.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container fade-up">
             <div class="team fade-up">
                 <p>Our Team</p>
                 <div class="persons">
@@ -263,14 +295,16 @@
     <footer>
         <div class="container">
             <section>
-                <div class="img-container">
-                    <img src="images/COCOPOW.webp" alt="">
-                </div>
-                <div class="img-container">
-                    <img src="images/map.webp" alt="">
+                <div>
+                    <div class="img-container">
+                        <img src="images/COCOPOW.webp" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="images/map.webp" alt="">
+                    </div>
                 </div>
                 <div class="content">
-                    <h1>Coco Pow Incorporation</h1>
+                    <h1>Coco Pow Corporated</h1>
                     <a href="https://www.facebook.com/share/15Y2Ho4VcL/" target="_blank" class="magnetic-button" data-strength="40" data-text-strength="20">
                         <div class="magnetic-text">
                             <div class="icon">

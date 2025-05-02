@@ -1,4 +1,4 @@
-/* gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger)
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
@@ -32,11 +32,11 @@ gsap.to(aboutImg, {
         end: "bottom top",
         scrub: true
     }
-}) */
+})
 
 
 
-/*        
+       
 const sections = document.querySelectorAll('.fade-up')
 
 sections.forEach((section, i) => {
@@ -46,14 +46,14 @@ sections.forEach((section, i) => {
         duration: .5,
         scrollTrigger: {
             trigger: section,
-            start: "-300px top",
+            start: "top center",
             toggleActions: "play reverse play reverse"
         }
     })
     
-}) */
+})
 
-/* const magneticButtons = document.querySelectorAll('.magnetic-button')
+const magneticButtons = document.querySelectorAll('.magnetic-button')
 const magneticTexts = document.querySelectorAll('.magnetic-text')
 
 magneticButtons.forEach((button, i) => {
@@ -96,7 +96,7 @@ magneticButtons.forEach((button, i) => {
 })
 
 
-const teamMates = document.querySelectorAll('.team .img-container')
+/* const teamMates = document.querySelectorAll('.team .img-container')
 const teamInfos = document.querySelectorAll('.team .info')
 teamMates.forEach((mate, i) => {
     mate.addEventListener('mouseenter', () => {
@@ -117,8 +117,8 @@ teamMates.forEach((mate, i) => {
             opacity: 0
         })
     })
-}) */
-
+})
+ */
 
 
 window.addEventListener('DOMContentLoaded', () => {

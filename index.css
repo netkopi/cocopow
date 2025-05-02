@@ -406,13 +406,13 @@ main {
     padding-bottom: clamp(100px, 25vw, 256px);
     display: flex;
     flex-direction: column;
+    gap: 100px;
 }
 .about .container {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 50px;
-    padding: 0 20px;
+    gap: 80px;
 }
 .about .img-container {
     width: max(260px, 100%);
@@ -475,6 +475,71 @@ main {
 
 
 
+.features {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: clamp(100px, 25vw, 256px);
+    padding-bottom: clamp(100px, 25vw, 256px);
+    background-color: #ddd;
+}
+.features .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+.features .cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: hidden;
+}
+.features .card {
+    width: max(260px, 100%);
+    max-width: 500px;
+    height: clamp(260px, 80vw, 500px);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #fff;
+}
+.features .card p {
+    width: max(200px, 100%);
+    max-width: 300px;
+    text-align: center;
+    font-size: clamp(14px, 5vw, 18px);
+    line-height: 29px;
+    text-shadow: 0 0 3px rgb(0 0 0 / 50%);
+}
+.features .img-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: -1;
+    transition: scale .3s ease;
+}
+.features img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(.5);
+}
+.features .card:hover .img-container {
+    scale: 1.2;
+}
+
+
 .team {
     width: 100%;
     padding-left: 20px;
@@ -504,7 +569,6 @@ main {
     max-width: 600px;
     height: clamp(260px, 80vw, 600px);
     overflow: hidden;
-    /* cursor: pointer; */
     position: relative;
 }
 .team .card:hover .info {
@@ -583,7 +647,7 @@ main {
     display: flex;
     justify-content: center;
     position: relative;
-    gap: 50px;
+    gap: 80px;
 }
 .products .img-container {
     width: max(260px, 100%);
@@ -654,7 +718,7 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 80px;
 }
 .how-to-order .content {
     width: max(260px, 100%);
@@ -786,7 +850,7 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 80px;
 }
 .feedback .form {
     width: max(260px, 100%);
@@ -845,13 +909,20 @@ footer .container {
     align-items: center;
 }
 footer section {
-    width: max(260px, 90%);
+    width: max(260px, 100%);
     padding: 100px 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 80px;
     color: #fff;
     flex-wrap: wrap;
+}
+footer section:first-child > div {
+    width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 footer .img-container {
     width: max(260px, 100%);
@@ -866,15 +937,14 @@ footer img {
     object-position: center;
 }
 footer .content {
+    max-width: 580px;
     color: #fff;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 20px;
 }
 footer h1 {
     font-size: clamp(36px, 8vw, 44px);
-    text-align: center;
 }
 footer section:first-child a {
     text-decoration: none;
@@ -910,9 +980,12 @@ footer section:last-child button {
     footer .content {
         align-items: center;
     }
+    footer h1 {
+        text-align: center;
+    }
 }
 @media (max-width: 968px){
-    .about .container, .team .persons, .products section  {
+    .about .container, .features .cards, .team .persons, .products section  {
         flex-wrap: wrap;
     }
     .team .persons {
