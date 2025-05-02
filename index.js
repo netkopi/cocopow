@@ -96,32 +96,9 @@ magneticButtons.forEach((button, i) => {
 })
 
 
-/* const teamMates = document.querySelectorAll('.team .img-container')
-const teamInfos = document.querySelectorAll('.team .info')
-teamMates.forEach((mate, i) => {
-    mate.addEventListener('mouseenter', () => {
-        gsap.to(mate, {
-            scale: 1.1,
-            duration: 1,
-        })
-        gsap.to(teamInfos[i], {
-            opacity: 1
-        })
-    })
-    mate.addEventListener('mouseleave', () => {
-        gsap.to(mate, {
-            scale: 1,
-            duration: 1
-        })
-        gsap.to(teamInfos[i], {
-            opacity: 0
-        })
-    })
-})
- */
 
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.querySelector('.loader')
         loader.style.display = 'none'
