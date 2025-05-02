@@ -20,14 +20,16 @@
 
     <div popover id="contact-us-form">
         <div class="contact-us-form">
-            <form action="">
+            <form action="https://formsubmit.co/f65b31fd2411eb8da658b30c97c364fe" method="POST">
                 <h1>Contact Us</h1>
                 <div class="note">
                     Please fill up the following input fields - your name, phone number, and your purpose of contacting us. One of our staff will call you lately, after submiting the form.
                 </div>
-                <input type="text" placeholder="name">
-                <input type="tel" placeholder="contact number">
-                <textarea name="" id="" placeholder="Purpose of contact..."></textarea>
+                <input type="text" placeholder="Full name">
+                <input type="email" name="email" placeholder="Email address">
+                <input type="tel" name="contact_number" placeholder="Contact number">
+                <textarea name="message" id="" placeholder="Purpose of contact..."></textarea>
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We will call to you shortly.">
                 <div class="buttons">
                     <button type="submit">submit</button>
                     <button type="button" popovertarget="contact-us-form" popovertargetaction="hide">cancel</button>
@@ -314,9 +316,13 @@
                     <p>Your feedback helps us improve our services in Coco Pow. With your feedback, Coco Pow can grow and you'll have a better service experience in the future!</p>
                 </div>
                 <div class="form">
-                    <textarea name="" id="" placeholder="Type here..."></textarea>
-                    <!-- <input type="email" name="" id="" placeholder="e.g. xxxxx@gmail.com"> -->
-                    <a href="">submit feedback</a>
+                    <form id="contactform" action="https://formsubmit.co/f65b31fd2411eb8da658b30c97c364fe" method="POST">
+                        <textarea name="message" id="" placeholder="Type here..." required></textarea>
+                        <input type="email" name="email" id="" placeholder="e.g. xxxxx@gmail.com" required>
+                        <input name="_formsubmit_id" type="text" style="display:none">
+                        <input type="hidden" name="_autoresponse" value="Thank you for your feedback!😁 We will do our best to make our service better in the future.">
+                        <button type="submit">submit feedback</button>
+                    </form>
                 </div>
 
             </div>
