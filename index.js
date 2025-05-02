@@ -138,3 +138,12 @@ howToOrderLink.forEach(link => {
     })
 })
 
+
+/* const feedbackSubmitButton = document.querySelector('.feedback a')
+const feedbackTextarea = document.querySelector('.feedback textarea')
+
+feedbackSubmitButton.addEventListener('click', () => {
+    const message = feedbackTextarea.value
+    feedbackSubmitButton.href = `emailto:sample@gmail.com?body=${encodeURIComponent(message)}`
+})
+ */

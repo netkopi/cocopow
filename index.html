@@ -27,7 +27,7 @@
                 </div>
                 <input type="text" placeholder="name">
                 <input type="tel" placeholder="contact number">
-                <textarea name="" id=""></textarea>
+                <textarea name="" id="" placeholder="Purpose of contact..."></textarea>
                 <div class="buttons">
                     <button type="submit">submit</button>
                     <button type="button" popovertarget="contact-us-form" popovertargetaction="hide">cancel</button>
@@ -39,7 +39,37 @@
     <div popover id="order-form">
         <div class="order-form">
             <form action="">
-
+                <h1>Order Form</h1>
+                <div class="note">
+                    Make sure you have already contacted us before you proceed in submitting this form. Unless you already contacted us, your order won't be processed.
+                </div>
+                <div class="input-field">
+                    <div class="names">
+                        <input type="text" title="Enter your business name" placeholder="Business name">
+                        <input type="text" title="Enter your full name" placeholder="Full name">
+                    </div>
+                    <div class="contacts">
+                        <input type="tel" title="Enter your contact number" placeholder="Contact number">
+                        <input type="email" title="Enter your email address" placeholder="Email address">
+                    </div>
+                    <label for="">Date of Reservation:</label>
+                    <input type="date" name="" id="" title="Date of Reserveration" placeholder="Date of Reservation">
+                    <label for="">Payment Method</label>
+                    <select name="" id="" title="Choose your payment method">
+                        <option selected disabled hidden>Select Method</option>
+                        <option value="Onsite Payment (Cash)">Onsite Payment (Cash)</option>
+                        <option value="GCash">GCash</option>
+                        <option value="BPI">BPI</option>
+                    </select>
+                </div>
+                <div class="confirmation">
+                    <input type="checkbox" name="" id="">
+                    <label for=""><i>I confirm that all information that I entered are correct and that I already made contact to Coco Pow.</i></label>
+                </div>
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="button" popovertarget="order-form" popovertargetaction="hide">Cancel</button>
+                </div>
             </form>
         </div>
     </div>
@@ -104,7 +134,7 @@
             <div class="content">
                 <h1>Hanap Mo, <span>Hatid Ko</span></h1>
                 <h2>Quality Na Coconut!</h2>
-                <button class="cta-link">Order Now</button>
+                <button class="cta-link" popovertarget="order-form">Order Now</button>
             </div>
         </div>
         <div class="about fade-up">
@@ -229,7 +259,7 @@
                         <h1>Young Coconut <i>"Buko"</i></h1>
                         <p>A young coconut, known as buko in the Philippines, is harvested while still green and immature. It contains a refreshing, slightly sweet coconut water and soft, jelly-like meat that’s easy to scoop with a spoon. Buko is often enjoyed as a drink, used in fruit salads, desserts, or blended into smoothies. The outer husk is smooth and green (or sometimes white when trimmed), and the shell inside is still relatively soft. Its high water content and tender meat make it prized for hydration and light, tropical flavor.</p>
                         <div class="schedule">
-                            <p><span>👉</span> Only on Monday, Tuesday, and Wednesday</p>
+                            <p><span>👉</span> Only on Monday, Wednesday, and Friday</p>
                             <p><span>👉</span> 3000 pieces limit per order</p>
                         </div>
                     </div>
@@ -273,7 +303,7 @@
                 <div class="content">
                     <h1>Ano pang hinihintay mo?</h1>
                     <p>Get your orders now! Kay Coco Pow, fresh ang coconuts mo!</p>
-                    <a hre="" class="cta-link">order now</a>
+                    <button class="cta-link" popovertarget="order-form">order now</button>
                 </div>
             </div>
         </div>
@@ -285,8 +315,8 @@
                 </div>
                 <div class="form">
                     <textarea name="" id="" placeholder="Type here..."></textarea>
-                    <input type="email" name="" id="" placeholder="e.g. xxxxx@gmail.com">
-                    <button>submit feedback</button>
+                    <!-- <input type="email" name="" id="" placeholder="e.g. xxxxx@gmail.com"> -->
+                    <a href="">submit feedback</a>
                 </div>
 
             </div>
