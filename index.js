@@ -179,11 +179,11 @@ const mthd = searchParam.get('mthd')
 
 const qr = document.querySelector('.qr-code img')
 if(qr){
-    document.querySelector('.bankMethod').textContent = mthd
+    document.querySelector('.bank-method').textContent = mthd
     switch(mthd){
         case "GCash":
             qr.src = paymentDetails[0].qr
-            breake
+            break
         case "BPI":
             qr.src = paymentDetails[1].qr
             break
