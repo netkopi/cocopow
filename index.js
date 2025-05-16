@@ -145,8 +145,47 @@ orderForm.addEventListener('submit', (e) => {
     
     const paymentMethod = document.querySelector('.orderForm select').value
     const response = document.querySelector('.autoresponse')
+
+    switch(paymentMethod){
+        case "GCash":
+            response.value = `Hello Customer 👋 Thank your for choosing CocoPow. Please proceed your payment here by clicking the link: https://netkopi.github.io/cocopow/payment-transaction/payment.html?mthd=GCash`
+            break
+        case "BPI":
+            response.value = `Hello Customer 👋 Thank your for choosing CocoPow. Please proceed your payment here by clicking the link: https://netkopi.github.io/cocopow/payment-transaction/payment.html?mthd=BPI`
+            break
+        default:
+            response.value = `Hello Customer 👋 Thank your for choosing CocoPow. Please proceed your payment on our site.`
+            break
+    }
     
-    response.value = `Hello Customer 👋 Thank your for choosing CocoPow. Please proceed your payment here by clicking the link: https://netkopi.github.io/cocopow/payment-transaction/payment.html?mthd=${paymentMethod}`
 
     orderForm.submit()
 })
+
+
+const paymentDetails = [
+    {
+        method: "GCash",
+        qr: "../images/gcash.jpg"
+    },
+    {
+        method: "BPI",
+        qr: "../images/bpi.png"
+    }
+]
+
+const searchParam = new URLSearchParams(window.location.search)
+const mthd = searchParam.get('mthd')
+
+const qr = document.querySelector('.qr-code img')
+if(qr){
+    document.querySelector('.bankMethod').textContent = mthd
+    switch(mthd){
+        case "GCash":
+            qr.src = paymentDetails[0].qr
+            breake
+        case "BPI":
+            qr.src = paymentDetails[1].qr
+            break
+    }
+}
