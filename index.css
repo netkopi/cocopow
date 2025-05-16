@@ -1065,6 +1065,42 @@ footer section:last-child button {
 }
 
 
+.payment-transaction-container {
+    background-color:#ED892D55;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.payment-transaction-container .qr-code {
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.payment-transaction-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.payment-transaction-container span {
+    font-size: 14px;
+}
+.payment-transaction-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: limegreen;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
 
 
 

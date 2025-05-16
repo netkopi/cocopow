@@ -138,3 +138,15 @@ howToOrderLink.forEach(link => {
     })
 })
 
+
+const orderForm = document.querySelector('.orderForm')
+orderForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    
+    const paymentMethod = document.querySelector('.orderForm select').value
+    const response = document.querySelector('.autoresponse')
+    
+    response.value = `Hello Customer 👋 Thank your for choosing CocoPow. Please proceed your payment here by clicking the link: https://netkopi.github.io/cocopow/payment-transaction/payment.html?mthd=${paymentMethod}`
+
+    orderForm.submit()
+})

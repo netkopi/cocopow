@@ -43,29 +43,40 @@
 
     <div popover id="order-form">
         <div class="order-form">
-            <form action="">
+            <form action="https://formsubmit.co/f65b31fd2411eb8da658b30c97c364fe" method="POST" class="orderForm">
                 <h1>Order Form</h1>
                 <div class="note">
                     Make sure you have already contacted us before you proceed in submitting this form. Unless you already contacted us, your order won't be processed.
                 </div>
                 <div class="input-field">
+
                     <div class="names">
-                        <input type="text" title="Enter your business name" placeholder="Business name">
-                        <input type="text" title="Enter your full name" placeholder="Full name">
+                        <input type="text" name="Business Name" title="Enter your business name" placeholder="Business name">
+                        <input type="text" name="Full Name" title="Enter your full name" placeholder="Full name">
                     </div>
+
                     <div class="contacts">
-                        <input type="tel" title="Enter your contact number" placeholder="Contact number">
-                        <input type="email" title="Enter your email address" placeholder="Email address">
+                        <input type="tel" name="Contact Number" title="Enter your contact number" placeholder="Contact number">
+                        <input type="email" name="email" title="Enter your email address" placeholder="Email address">
                     </div>
+
                     <label for="">Date of Reservation:</label>
-                    <input type="date" name="" id="" title="Date of Reserveration" placeholder="Date of Reservation">
+                    <input type="date" name="Date" id="date" title="Date of Reserveration" placeholder="Date of Reservation">
+
                     <label for="">Payment Method</label>
-                    <select name="" id="" title="Choose your payment method">
+                    <select name="payment_method" id="" title="Choose your payment method">
                         <option selected disabled hidden>Select Method</option>
                         <option value="Onsite Payment (Cash)">Onsite Payment (Cash)</option>
                         <option value="GCash">GCash</option>
                         <option value="BPI">BPI</option>
                     </select>
+
+                    <input type="hidden" name="_autoresponse" class="autoresponse">
+                    <input type="hidden" name="Payment Method">
+                    <input type="text" name="_formsubmit_id" hidden>
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://netkopi.github.io/cocopow">
+
                 </div>
                 <div class="confirmation">
                     <input type="checkbox" name="" id="">
