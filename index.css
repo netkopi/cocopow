@@ -1074,8 +1074,11 @@ footer section:last-child button {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding: 100px 20px;
 }
 .payment-transaction-container .qr-code {
+    width: max(260px, 100%);
+    max-width: 500px;
     height: 600px;
     background-color: #fff;
     border-radius: 5px;
