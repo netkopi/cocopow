@@ -229,7 +229,7 @@ body {
     max-width: 600px;
     font-size: 14px;
 }
-.order-form :where(.contacts, .names) {
+.order-form :where(.contacts, .names, .order-info) {
     display: flex;
     justify-content: center;
     width: max(260px, 100%);
@@ -237,7 +237,7 @@ body {
     display: flex;
     gap: 20px;
 }
-.order-form :where(.contacts, .names) input {
+.order-form :where(.contacts, .names, .order-info) input {
     width: max(290px, 100%);
     max-width: 600px;
 }

@@ -59,6 +59,15 @@
                         <input type="tel" name="Contact Number" title="Enter your contact number" placeholder="Contact number">
                         <input type="email" name="email" title="Enter your email address" placeholder="Email address">
                     </div>
+                    
+                    <div class="order-info">
+                        <select name="Product" id="">
+                            <option disabled selected hidden>Type of Coconut</option>
+                            <option value="Young Coconut">Young Coconut (Buko)</option>
+                            <option value="Matured Coconut">Matured Coconut (Niyog)</option>
+                        </select>
+                        <input type="number" name="Quantity" id="quantity" placeholder="Quantity">
+                    </div>
 
                     <label for="">Date of Reservation:</label>
                     <input type="date" name="Date" id="date" title="Date of Reserveration" placeholder="Date of Reservation">
@@ -71,6 +80,7 @@
                         <option value="BPI">BPI</option>
                     </select>
 
+                    <input type="hidden" name="Total Payment" id="total_payment">
                     <input type="hidden" name="_autoresponse" class="autoresponse">
                     <input type="text" name="_formsubmit_id" hidden>
                     <input type="hidden" name="_template" value="table">
