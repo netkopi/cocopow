@@ -163,29 +163,3 @@ orderForm.addEventListener('submit', (e) => {
 })
 
 
-const paymentDetails = [
-    {
-        method: "GCash",
-        qr: "../images/gcash.jpg"
-    },
-    {
-        method: "BPI",
-        qr: "../images/bpi.png"
-    }
-]
-
-const searchParam = new URLSearchParams(window.location.search)
-const mthd = searchParam.get('mthd')
-
-const qr = document.querySelector('.qr-code img')
-if(qr){
-    document.querySelector('.bank-method').textContent = mthd
-    switch(mthd){
-        case "GCash":
-            qr.src = paymentDetails[0].qr
-            break
-        case "BPI":
-            qr.src = paymentDetails[1].qr
-            break
-    }
-}

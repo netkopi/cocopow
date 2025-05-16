@@ -1075,18 +1075,20 @@ footer section:last-child button {
     justify-content: center;
     gap: 20px;
     padding: 100px 20px;
+    overflow-y: auto;
 }
 .payment-transaction-container .qr-code {
     width: max(260px, 100%);
     max-width: 500px;
-    height: 600px;
+    min-height: 600px;
     background-color: #fff;
     border-radius: 5px;
+    overflow: hidden;
 }
 .payment-transaction-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
 }
 .payment-transaction-container span {
