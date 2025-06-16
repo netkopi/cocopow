@@ -143,7 +143,7 @@ const orderForm = document.querySelector('.orderForm')
 orderForm.addEventListener('submit', (e) => {
     e.preventDefault()
     
-    const paymentMethod = document.querySelector('.orderForm select').value
+    const paymentMethod = document.querySelector('#payment-method').value
     const response = document.querySelector('.autoresponse')
 
     switch(paymentMethod){
@@ -163,3 +163,12 @@ orderForm.addEventListener('submit', (e) => {
 })
 
 
+
+
+const orderformCheckbox = document.querySelectorAll(".order-form form input[type='checkbox']")
+orderformCheckbox.forEach(box => {
+    box.addEventListener('change', () => {
+        if(orderformCheckbox[0].checked && orderformCheckbox[1].checked) document.querySelector("#submit-order-form").disabled = false
+        if(!orderformCheckbox[0].checked || !orderformCheckbox[1].checked) document.querySelector("#submit-order-form").disabled = true
+    })
+})

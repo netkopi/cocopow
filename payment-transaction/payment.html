@@ -36,12 +36,26 @@
     </script>
 </head>
 <body>
+    <div popover id="attach-file">
+        <div>
+            <form>
+                <span class="title">payment receipt</span>
+                <span class="text">Please attach your payment receipt and send it to us to confirm your payment transaction.</span>
+                <input type="file" name="file" id="file" hidden accept=".png, .jpg, .jpeg">
+                <label for="file">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#currentcolor"><path d="M720-330q0 104-73 177T470-80q-104 0-177-73t-73-177v-370q0-75 52.5-127.5T400-880q75 0 127.5 52.5T580-700v350q0 46-32 78t-78 32q-46 0-78-32t-32-78v-330q0-17 11.5-28.5T400-720q17 0 28.5 11.5T440-680v330q0 13 8.5 21.5T470-320q13 0 21.5-8.5T500-350v-350q-1-42-29.5-71T400-800q-42 0-71 29t-29 71v370q-1 71 49 120.5T470-160q70 0 119-49.5T640-330v-350q0-17 11.5-28.5T680-720q17 0 28.5 11.5T720-680v350Z"/></svg>
+                    attach file
+                </label>
+                <button type="submit">submit</button>
+            </form>
+        </div>
+    </div>
     <div class="payment-transaction-container">
         <div class="qr-code">
             <img alt="">
         </div>
         <span>Please send your payment here in our <span class="bank-method"></span> account.</span>
-        <button>Done</button>
+        <button popovertarget="attach-file">Done</button>
     </div>
 </body>
 </html>

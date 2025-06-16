@@ -18,6 +18,20 @@
         <div class="dots">.....</div>
     </div>
 
+    <div popover id="termsandcondition">
+        <div class="termsandcondition">
+            <form>
+                <h1>Terms and Condition</h1>
+                <ul>
+                    <li>Strictly NO CANCELATION of orders.</li>
+                    <li>No REFUND unless the error is on CocoPOW's part.</li>
+                    <li>Coco POW is not liable for any issues caused by incorrect or false information the customer have submitted.</li>
+                    <li>I agree to send the exact amount only as payment. Overpayment or underpayment is the buyer's responsibility.</li>
+                </ul>
+                <button type="button" popovertarget="termsandcondition" popovertargetaction="hide" onclick="termsconditioncheckbox.checked = true">I agree</button>
+            </form>
+        </div>
+    </div>
     <div popover id="contact-us-form">
         <div class="contact-us-form">
             <form action="https://formsubmit.co/f65b31fd2411eb8da658b30c97c364fe" method="POST">
@@ -73,7 +87,7 @@
                     <input type="date" name="Date" id="date" title="Date of Reserveration" placeholder="Date of Reservation">
 
                     <label for="">Payment Method</label>
-                    <select name="Payment Method" id="" title="Choose your payment method">
+                    <select name="Payment Method" id="payment-method" title="Choose your payment method">
                         <option selected disabled hidden>Select Method</option>
                         <option value="Onsite Payment (Cash)">Onsite Payment (Cash)</option>
                         <option value="GCash">GCash</option>
@@ -88,11 +102,15 @@
 
                 </div>
                 <div class="confirmation">
+                    <input type="checkbox" name="" id="termsconditioncheckbox">
+                    <label for=""><i>I aggree to the <button type="button" class="terms-condition" popovertarget="termsandcondition">Terms and Conditions</button> of Cocopow.</i></label>
+                </div>
+                <div class="confirmation">
                     <input type="checkbox" name="" id="">
                     <label for=""><i>I confirm that all information that I entered are correct and that I already made contact to Coco Pow.</i></label>
                 </div>
                 <div class="buttons">
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submit-order-form" disabled>Submit</button>
                     <button type="button" popovertarget="order-form" popovertargetaction="hide">Cancel</button>
                 </div>
             </form>
@@ -162,13 +180,40 @@
                 <button class="cta-link" popovertarget="order-form">Order Now</button>
             </div>
         </div>
-        <div class="about fade-up">
+        <div class="features">
+            <div class="container">
+                <div class="cards fade-up">
+                    <div class="card">
+                        <h1>free waste disposal</h1>
+                        <p>Nowhere to dispose your coconut wastes? Worry no more, cocopow will provide a free disposal of your coconut wastes so you don't have to bother thinking how or where to dispose it.</p>
+                        <div class="img-container">
+                            <img src="images/coconut-truck3.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h1>100% FRESH</h1>
+                        <p>Our coconuts are top quality coconuts. We don't take from stocks. Our coconuts are 100% pure and fresh, harvested right after order. Harvested by farmers in the province of Quezon, a filipino-trusted-province where quality coconuts are taken.</p>
+                        <div class="img-container">
+                            <img src="images/coconut2.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h1>10K+ SUPPLIES</h1>
+                        <p>Cocopow has partnered with over 400+ farmers in Quezon province and can supply for more than 10, 000 coconuts every month. With Coco Pow, your supply of coconuts are always on stock.</p>
+                        <div class="img-container">
+                            <img src="images/coconut-truck2.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="about fade-up">
             <div class="container">
                 <div class="img-container">
-                    <img src="images/team.webp" alt="">
+                    <img src="images/team-1.webp" alt="">
                 </div>
                 <div class="about-content">
-                    <h1>Did your know?</h1>
+                    <h1>Did you know?</h1>
                     <p>Coco Pow is a filipino-owned business in Laguna, Philippines. The Coco Pow business started its journey in year 2023. Initially, the purpose of Cocopow was to supply their own needs of coconuts, but later on became a supplier for other businesses. <br><br>Want to learn more? You're free to contact us anytime.</p>
                     <div class="contacts">
                         <div>
@@ -207,33 +252,6 @@
                 </div>
             </div>
         </div>
-        <div class="features">
-            <div class="container">
-                <div class="cards fade-up">
-                    <div class="card">
-                        <h1>FAST SHIPPING</h1>
-                        <p>We offer you our fast shipping service. We carefully ship your orders from Coco Pow Hub, to your hands and with constant updates to the latest process.</p>
-                        <div class="img-container">
-                            <img src="images/coconut-truck3.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h1>100% FRESH</h1>
-                        <p>Our coconuts are top quality coconuts. We don't take from stocks. Our coconuts are 100% pure and fresh, harvested right after order.</p>
-                        <div class="img-container">
-                            <img src="images/coconut2.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h1>10K+ SUPPLIES</h1>
-                        <p>Running out of supply? Worry no more! Coco Pow can supply more than 10,000 coconuts every month. With Coco Pow, your supply of coconuts are always on stock.</p>
-                        <div class="img-container">
-                            <img src="images/coconut-truck2.webp" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="products">
             <div class="container">
                 <section class="fade-up">
@@ -241,7 +259,7 @@
                         <h1>Young Coconut <i>"Buko"</i></h1>
                         <p>A young coconut, known as buko in the Philippines, is harvested while still green and immature. It contains a refreshing, slightly sweet coconut water and soft, jelly-like meat that’s easy to scoop with a spoon. Buko is often enjoyed as a drink, used in fruit salads, desserts, or blended into smoothies. The outer husk is smooth and green (or sometimes white when trimmed), and the shell inside is still relatively soft. Its high water content and tender meat make it prized for hydration and light, tropical flavor.</p>
                         <div class="schedule">
-                            <p><span>👉</span> Only on Monday, Wednesday, and Friday</p>
+                            <p><span>👉</span> Only on Tuesday and Saturday</p>
                             <p><span>👉</span> 3000 pieces limit per order</p>
                         </div>
                     </div>
@@ -257,7 +275,7 @@
                         <h1>Matured Coconut <i>"Niyog"</i></h1>
                         <p>A mature coconut, or niyog, is fully ripened and has a hard, brown shell with coarse fibers. Inside, the coconut water is reduced, and the white meat is thick, firm, and rich in oil. This meat is grated or pressed to extract coconut milk or oil and is commonly used in cooking, baking, and traditional dishes. The husk is rough and dry, making it suitable for other uses like fuel or craft material. Niyog is valued more for its culinary and practical applications than for drinking.</p>
                         <div class="schedule">
-                            <p><span>👉</span> Only on Saturday</p>
+                            <p><span>👉</span> Only on Thursday</p>
                             <p><span>👉</span> Pre-order is required</p>
                         </div>
                     </div>

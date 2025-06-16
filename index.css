@@ -129,12 +129,89 @@ body {
     width: max(260px, 100%);
     max-width: 600px;
     border: 2px solid #ED892D;
-    border-radius: 10px;
+    border-radius: 3px;
     background-color: #ed8a2d32;
     color: #111;
     font-size: 14px;
     padding: 10px;
 }
+[popover]#attach-file form {
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+}
+[popover]#attach-file label {
+    width: 100%;
+    padding: 20px;
+    background: #dfdfdf;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+[popover]#attach-file button {
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #ED892D;
+    border: none;
+    border-radius: 5px;
+}
+[popover]#attach-file .title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+[popover]#attach-file .text {
+    font-size: 14px;
+    line-height: 29px;
+    border: 2px solid #ED892D;
+    background-color: #ED892D55;
+    padding: 10px;
+    border-radius: 5px;
+}
+[popover]#attach-file svg {
+    width: 20px;
+    height: 20px;
+}
+.terms-condition {
+    background-color: transparent !important;
+    color: #ED892D;
+    padding: 0 !important;
+}
+[popover]#termsandcondition form {
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 3px;
+}
+[popover]#termsandcondition form ul {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+[popover]#termsandcondition button {
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 14px;
+    background-color: #ddd;
+}
+
 
 .contact-us-form {
     background-color: #fff;
@@ -144,6 +221,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
 }
 .contact-us-form form {
     width: 90%;
@@ -175,6 +253,7 @@ body {
 .contact-us-form button {
     padding: 10px 20px;
     border: none;
+    border-radius: 3px;
     font-size: 14px;
     cursor: pointer;
     background-color: #ddd;
@@ -195,6 +274,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 50px 0;
+    border-radius: 3px;
 }
 .order-form form {
     width: 90%;
@@ -252,6 +332,7 @@ body {
 .order-form button {
     padding: 10px 20px;
     border: none;
+    border-radius: 3px;
     font-size: 14px;
     cursor: pointer;
     background-color: #ddd;
@@ -267,7 +348,11 @@ body {
     max-width: 600px;
     font-size: 14px;
 }
-
+.order-form #submit-order-form[disabled] {
+    background-color: #ddd !important;
+    color: #555;
+    cursor: default;
+}
 
 
 
@@ -588,6 +673,12 @@ main {
     justify-content: center;
     gap: 20px;
     color: #fff;
+}
+.features .card h1 {
+    text-transform: uppercase;
+    width: 300px;
+    text-wrap: balance;
+    text-align: center;
 }
 .features .card p {
     width: max(200px, 100%);
@@ -1012,6 +1103,7 @@ footer section:last-child button {
     font-size: 14px;
 }
 .payment-transaction-container button {
+    width: 500px;
     padding: 10px;
     border: none;
     border-radius: 5px;
