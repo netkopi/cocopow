@@ -140,28 +140,30 @@ howToOrderLink.forEach(link => {
 
 
 const orderForm = document.querySelector('.orderForm')
+
 orderForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    
+
+    const customer_name = document.querySelector('#customer_name').value.trim()
+    const business_name = document.querySelector('#business_name').value.trim()
+    const email = document.querySelector('#email').value.trim()
     const paymentMethod = document.querySelector('#payment-method').value
     const response = document.querySelector('.autoresponse')
 
-    switch(paymentMethod){
+    const params = `cstmr=${encodeURIComponent(customer_name)}&bsns=${encodeURIComponent(business_name)}&email=${encodeURIComponent(email)}`
+
+    switch(paymentMethod) {
         case "GCash":
-            response.value = `Hello Customer 👋 Thank your for choosing CocoPow. Please proceed your payment here by clicking the link: https://netkopi.github.io/cocopow/payment-transaction/payment.html?mthd=GCash`
+            response.value = `Hello Customer 👋 Thank you for choosing CocoPow. Please proceed with your payment here: https://netkopi.github.io/cocopow/payment-transaction/payment.html?mthd=GCash&${params}`
             break
         case "BPI":
-            response.value = `Hello Customer 👋 Thank your for choosing CocoPow. Please proceed your payment here by clicking the link: https://netkopi.github.io/cocopow/payment-transaction/payment.html?mthd=BPI`
+            response.value = `Hello Customer 👋 Thank you for choosing CocoPow. Please proceed with your payment here: https://netkopi.github.io/cocopow/payment-transaction/payment.html?mthd=BPI&${params}`
             break
         default:
-            response.value = `Hello Customer 👋 Thank your for choosing CocoPow. Please proceed your payment on our site.`
+            response.value = `Hello Customer 👋 Thank you for choosing CocoPow. Please proceed with your payment on our site.`
             break
     }
-    
-
-    orderForm.submit()
 })
-
 
 
 
