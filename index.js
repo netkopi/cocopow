@@ -163,6 +163,8 @@ orderForm.addEventListener('submit', (e) => {
             response.value = `Hello Customer 👋 Thank you for choosing CocoPow. Please proceed with your payment on our site.`
             break
     }
+
+    orderForm.submit()
 })
 
 
