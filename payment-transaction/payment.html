@@ -46,11 +46,15 @@
       document.querySelector("#file-attachment").addEventListener("submit", async function (e) {
         e.preventDefault();
 
+        const loader = document.querySelector('#loader-2')
+
+
         const name = this.user_name.value;
         const email = this.user_email.value;
         const file = document.querySelector("#image_input").files[0];
 
         if (!file) return alert("Please select a file.");
+        loader.showPopover()
 
         const compressImage = (file) => {
           return new Promise((resolve) => {
@@ -71,9 +75,12 @@
             base64: base64
           })
         })
-        .then(() => alert("Email sent with real attachment!"))
+        .then(() => {
+          loader.hidePopover()
+          document.querySelector('#confirmation').showPopover()
+        })
         .catch(err => {
-          console.error("Error sending email:", err);
+          document.querySelector('#attach-file').showPopover()
           alert("Failed to send email.");
         });
       });
@@ -82,6 +89,26 @@
   </script>
 </head>
 <body>
+
+  <div popover id="loader-2" class="loader-2">
+    <div>
+      <div></div>
+    </div>
+  </div>
+
+  <div popover id="confirmation" class="confirmation">
+    <div>
+      <form>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor"><path d="m382-354 339-339q12-12 28-12t28 12q12 12 12 28.5T777-636L410-268q-12 12-28 12t-28-12L182-440q-12-12-11.5-28.5T183-497q12-12 28.5-12t28.5 12l142 143Z"/></svg>
+        </div>
+        <h1>Congratulation!</h1>
+        <p>Your order will now be processed. We will notify you with updates along the way.</p>
+        <a href="../index.html">Go Home</a>
+      </form>
+    </div>
+  </div>
+
   <div popover id="attach-file">
     <div>
       <form id="file-attachment">
