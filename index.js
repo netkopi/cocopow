@@ -146,7 +146,7 @@ orderForm.addEventListener('submit', (e) => {
 
     const customer_name = document.querySelector('#customer_name').value.trim()
     const business_name = document.querySelector('#business_name').value.trim()
-    const email = document.querySelector('#email').value.trim()
+    const email = "aguilargabriel2005@gmail.com".trim()
     const paymentMethod = document.querySelector('#payment-method').value
     const response = document.querySelector('.autoresponse')
 

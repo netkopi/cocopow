@@ -141,7 +141,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 400px;
+    width: max(300px, 100%);
+    max-width: 600px;
     border-radius: 3px;
 }
 [popover]#attach-file label {
@@ -183,6 +184,24 @@ body {
     width: 20px;
     height: 20px;
 }
+[popover]#attach-file .preview-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    width: 100% !important;
+}
+[popover]#attach-file .file-name {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    width: 100px;
+}
+[popover]#attach-file .preview-image.preview {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #222;
+}
+
 .terms-condition {
     background-color: transparent !important;
     color: #ED892D;
@@ -212,6 +231,7 @@ body {
     font-size: 14px;
     background-color: #ddd;
 }
+
 
 
 .contact-us-form {
