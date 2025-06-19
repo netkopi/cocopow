@@ -142,6 +142,7 @@ body {
     flex-direction: column;
     gap: 20px;
     width: 400px;
+    border-radius: 3px;
 }
 [popover]#attach-file label {
     width: 100%;
